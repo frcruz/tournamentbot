@@ -53,6 +53,14 @@ class Matches:
                     player2 = None
                     self.matches[id] = match
                     id += 1
+            if player1 is not None and player2 is None:
+                try: 
+                    groups[group + 1].append(player1)
+                except:
+                    print("xception")
+                    player1.win += 1
+            
+
         return matches
 
     

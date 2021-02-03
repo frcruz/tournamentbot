@@ -32,6 +32,7 @@ class Matches:
         matches = {}
         groups = []
         groups = self.create_groups(self.players)
+        id = 0
         for group in groups: 
             player1 = None
             player2 = None
@@ -39,7 +40,6 @@ class Matches:
             for player in groups[group]:
                 random_players.append(player)
             random.shuffle(random_players)
-            id = 0
             for player in random_players:
                 if player1 is None:
                     player1 = player
@@ -56,12 +56,11 @@ class Matches:
             if player1 is not None and player2 is None:
                 try: 
                     groups[group + 1].append(player1)
+                    print("not exe")
+                    player1 = None
                 except:
                     print("xception")
                     player1.win += 1
-            
-
-        return matches
 
     
         

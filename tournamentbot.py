@@ -20,5 +20,5 @@ async def tournament(ctx, name):
 async def status(ctx):
     response = tourny.name + " is still in progress Rounds x/y"
     await ctx.send(response)
-
+@bot.command(name='addplayer')
 bot.run(TOKEN)
